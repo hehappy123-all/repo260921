@@ -28,17 +28,20 @@
             </div>
         </section>
 
-        <!-- 2. 컵 사이즈 선택 미리보기 (크기 조절 기능 응용) -->
+        <!-- 2. 컵 사이즈 선택 미리보기 (컵 모양 및 사이즈 표기 적용) -->
         <section class="card">
             <h2>2. 컵 용량 미리보기</h2>
-            <p class="sub-text">버튼을 눌러 컵 용량 크기를 시각적으로 확인해 보세요.</p>
+            <p class="sub-text">버튼을 눌러 원하시는 컵 사이즈를 선택해보세요.</p>
             <div class="size-preview-wrapper">
-                <div id="target02" class="cup-box">Standard (100px)</div>
+                <!-- 컵 모양 컨테이너 -->
+                <div id="target02" class="cup-shape medium">
+                    <span id="cupText">Medium</span>
+                </div>
             </div>
             <div class="btn-group">
-                <button onclick="f02(80);">Small (80px)</button>
-                <button onclick="f02(120);">Medium (120px)</button>
-                <button onclick="f02(160);">Large (160px)</button>
+                <button onclick="f02('Small');">Small</button>
+                <button onclick="f02('Medium');">Medium</button>
+                <button onclick="f02('Large');">Large</button>
             </div>
         </section>
 
