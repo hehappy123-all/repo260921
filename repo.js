@@ -7,13 +7,16 @@ function f01() {
     x.innerHTML = "선택된 밸런스 컬러: " + c;
 }
 
-// 2. 컵 크기 조절
-function f02(num) {
+// 2. 컵 크기 조절 (Small, Medium, Large)
+function f02(size) {
     x = document.querySelector("#target02");
+    cupText = document.querySelector("#cupText");
     
-    x.style.width = num + 'px';
-    x.style.height = num + 'px';
-    x.innerHTML = num + 'px';
+    // 기존 사이즈 클래스 제거 후 새 사이즈 클래스 추가
+    x.className = "cup-shape " + size.toLowerCase();
+    
+    // 컵 내부 텍스트 수정
+    cupText.innerHTML = size;
 }
 
 // 3. 커피 커스텀 주문서 출력
